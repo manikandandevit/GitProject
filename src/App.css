@@ -78,6 +78,17 @@
   line-height: 1.6;
 }
 
+.hero-playing {
+  position: relative;
+  margin: 1.25rem 0 0 0;
+  font-size: 0.9rem;
+  color: #8b7355;
+}
+
+.hero-playing strong {
+  font-weight: 600;
+}
+
 .sounds {
   max-width: 56rem;
   margin: 0 auto;
@@ -143,6 +154,20 @@
   font-size: 0.8rem;
   color: #8b7355;
   font-weight: 300;
+}
+
+.sound-card-playing {
+  background: rgba(139, 115, 85, 0.12);
+  border-color: rgba(139, 115, 85, 0.35);
+  box-shadow: 0 8px 28px rgba(61, 55, 50, 0.12);
+}
+
+.sound-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #8b7355;
+  margin-top: 0.25rem;
 }
 
 .about {
