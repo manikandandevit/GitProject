@@ -4,41 +4,58 @@ function App() {
   return (
     <div className="dashboard">
       <header className="dashboard-header">
-        <div className="logo">Dashboard</div>
+        <div className="logo">
+          <span className="logo-icon">⚔</span> AZAR ZONE
+        </div>
         <nav className="nav">
           <span className="nav-item active">Home</span>
-          <span className="nav-item">Reports</span>
-          <span className="nav-item">Settings</span>
+          <span className="nav-item">Territory</span>
+          <span className="nav-item">Squad</span>
         </nav>
       </header>
 
       <main className="dashboard-main">
         <section className="welcome-section">
-          <h1 className="welcome-title">Welcome back</h1>
+          <p className="welcome-tag">— Azar Anna's Dashboard</p>
+          <h1 className="welcome-title">
+            "Naan inga irundhale, ellam set."
+          </h1>
           <p className="welcome-subtitle">
-            Here’s what’s happening with your project today.
+            Control full-a irukku. Edhavadhu problem-na kelunga — one call, one move.
           </p>
         </section>
 
+        <section className="quote-section">
+          <blockquote className="rowdy-quote">
+            "Rowdy nu solla theriyuma? Naan dhan rowdy. Respect kudunga — problem illa."
+          </blockquote>
+        </section>
+
         <section className="cards">
-          <div className="card">
-            <span className="card-label">Overview</span>
-            <span className="card-value">Ready</span>
-          </div>
-          <div className="card">
+          <div className="card card-red">
             <span className="card-label">Status</span>
-            <span className="card-value">Active</span>
+            <span className="card-value">FULL POWER</span>
           </div>
           <div className="card">
-            <span className="card-label">Quick start</span>
-            <span className="card-value">Go</span>
+            <span className="card-label">Territory</span>
+            <span className="card-value">LOCKED</span>
+          </div>
+          <div className="card">
+            <span className="card-label">Squad</span>
+            <span className="card-value">READY</span>
           </div>
         </section>
 
         <section className="cta-section">
-          <p>Get started by editing <code>src/App.jsx</code></p>
+          <p className="cta-text">
+            <strong>Anna dialogue:</strong> "Dashboard edit panna theriyuma? <code>src/App.jsx</code> open pannunga — naan solli kodutha maadhiri pannunga."
+          </p>
         </section>
       </main>
+
+      <footer className="dashboard-footer">
+        <span>© AZAR ZONE — Respect only. No drama.</span>
+      </footer>
     </div>
   )
 }
