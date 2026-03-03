@@ -1,60 +1,57 @@
 import './App.css'
 
 function App() {
+  const categories = [
+    { name: 'Rain', icon: '🌧️', desc: 'Soft rain on glass' },
+    { name: 'Whisper', icon: '💤', desc: 'Gentle whispers' },
+    { name: 'Tapping', icon: '👆', desc: 'Soft tapping sounds' },
+    { name: 'Nature', icon: '🍃', desc: 'Forest & birds' },
+    { name: 'White Noise', icon: '〰️', desc: 'Calm static' },
+    { name: 'Binaural', icon: '🎧', desc: '3D relaxation' },
+  ]
+
   return (
-    <div className="dashboard">
-      <header className="dashboard-header">
-        <div className="logo">
-          <span className="logo-icon">⚔</span> AZAR ZONE
-        </div>
+    <div className="asmr">
+      <header className="asmr-header">
+        <div className="logo">ASMR</div>
         <nav className="nav">
-          <span className="nav-item active">Home</span>
-          <span className="nav-item">Territory</span>
-          <span className="nav-item">Squad</span>
+          <a href="#home">Home</a>
+          <a href="#sounds">Sounds</a>
+          <a href="#about">About</a>
         </nav>
       </header>
 
-      <main className="dashboard-main">
-        <section className="welcome-section">
-          <p className="welcome-tag">— Azar Anna's Dashboard</p>
-          <h1 className="welcome-title">
-            "Naan inga irundhale, ellam set."
-          </h1>
-          <p className="welcome-subtitle">
-            Control full-a irukku. Edhavadhu problem-na kelunga — one call, one move.
+      <main>
+        <section className="hero" id="home">
+          <div className="hero-bg" aria-hidden="true" />
+          <h1 className="hero-title">Relax. Listen. Feel.</h1>
+          <p className="hero-subtitle">
+            Soft sounds for sleep, focus & calm. Pick a sound and unwind.
           </p>
         </section>
 
-        <section className="quote-section">
-          <blockquote className="rowdy-quote">
-            "Rowdy nu solla theriyuma? Naan dhan rowdy. Respect kudunga — problem illa."
-          </blockquote>
-        </section>
-
-        <section className="cards">
-          <div className="card card-red">
-            <span className="card-label">Status</span>
-            <span className="card-value">FULL POWER</span>
-          </div>
-          <div className="card">
-            <span className="card-label">Territory</span>
-            <span className="card-value">LOCKED</span>
-          </div>
-          <div className="card">
-            <span className="card-label">Squad</span>
-            <span className="card-value">READY</span>
+        <section className="sounds" id="sounds">
+          <h2 className="section-title">Sound categories</h2>
+          <div className="sound-grid">
+            {categories.map((cat) => (
+              <button key={cat.name} className="sound-card" type="button">
+                <span className="sound-icon">{cat.icon}</span>
+                <span className="sound-name">{cat.name}</span>
+                <span className="sound-desc">{cat.desc}</span>
+              </button>
+            ))}
           </div>
         </section>
 
-        <section className="cta-section">
-          <p className="cta-text">
-            <strong>Anna dialogue:</strong> "Dashboard edit panna theriyuma? <code>src/App.jsx</code> open pannunga — naan solli kodutha maadhiri pannunga."
+        <section className="about" id="about">
+          <p className="about-text">
+            Use headphones for the best experience. Find a quiet place, close your eyes, and let the sounds ease you.
           </p>
         </section>
       </main>
 
-      <footer className="dashboard-footer">
-        <span>© AZAR ZONE — Respect only. No drama.</span>
+      <footer className="asmr-footer">
+        <span>ASMR — for relaxation only.</span>
       </footer>
     </div>
   )
